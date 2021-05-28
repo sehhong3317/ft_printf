@@ -6,7 +6,7 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 17:32:18 by sehhong           #+#    #+#             */
-/*   Updated: 2021/05/28 18:25:28 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/05/28 20:36:22 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ static	void	display_str(t_opts opts)
 	else
 		str_num = ft_strlen(opts.str);
 	sp_num = opts.width - str_num;
+	if (sp_num < 0)
+		sp_num = 0;
 	malloc_cnt = (str_num > opts.width ? str_num : opts.width);
 	opti_str = (char*)malloc(sizeof(char) * (malloc_cnt + 1));
 	// if (!opti_str)
@@ -128,7 +130,5 @@ int				ft_printf(const char *format, ...)
 
 int		main()
 {
-	ft_printf("my name is %-*.5s. And I'm a %10.7s.", 7, "sehee hong", "student of law school");
-	return 0;
+	ft_printf("str:%-*.*s", 3, 4, "abcde");  //abcde
 }
-
