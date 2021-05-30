@@ -6,7 +6,7 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 15:44:34 by sehhong           #+#    #+#             */
-/*   Updated: 2021/05/28 17:45:29 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/05/30 16:19:29 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,10 @@
 
 typedef struct	s_opts
 {
-	int	is_minus;
-	int	is_plus;
-	int	is_space;
-	int	is_zero;
-	int	is_hash;
-	int	width;
-	int	precis;
+	int		is_minus;
+	int		width;
+	int		precis;
 	char	*str;
-
 }				t_opts;
 
 int		ft_strlen(const char *s);
