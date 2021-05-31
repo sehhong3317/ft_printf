@@ -6,7 +6,7 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 17:32:18 by sehhong           #+#    #+#             */
-/*   Updated: 2021/05/30 19:16:23 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/05/31 12:04:39 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -208,13 +208,12 @@ int				ft_printf(const char *format, ...)
 int		main(void)
 {
 	int	a,b;
-	int	ret;
 
 	a = 7;
 	b = 10;
-	ret = printf("%p", &a);
+	printf("%07.3d", 2147);
 	printf("\n---------\n");
-	printf("%p", &b);
+	printf("w: 4->%04d", 3);
 	printf("\n---------\n");
-	printf("ret: %d", ret);
+	//printf("ret: %d", ret);
 }

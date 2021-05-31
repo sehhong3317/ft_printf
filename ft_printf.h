@@ -6,7 +6,7 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 15:44:34 by sehhong           #+#    #+#             */
-/*   Updated: 2021/05/30 16:19:29 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/05/31 17:11:27 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,12 @@
 typedef struct	s_opts
 {
 	int		is_minus;
+	int		is_zero;
 	int		width;
 	int		precis;
 	char	*str;
+	int		nbr_digit;
+	int		nbr_neg;
 }				t_opts;
 
 int		ft_strlen(const char *s);
@@ -37,5 +40,6 @@ char	*ft_strcpy(char *dest, char *src);
 int		ft_printf(const char *format, ...);
 char	*ft_strncpy(char *dest, char *src, int n);
 void	sp_insert(char *str, int start, int size);
+char	*ft_itoa(long n);
 
 # endif
