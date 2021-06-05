@@ -6,7 +6,7 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 11:01:52 by sehhong           #+#    #+#             */
-/*   Updated: 2021/06/05 12:03:07 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/06/05 16:54:46 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,12 @@ void	opts_priority(t_opts *opts)
 	}
 }
 
-int		format_analyzer(va_list ap, char **str)
+int		format_analyzer(va_list ap, char **str, int count)
 {
 	t_opts	opts;
 	int		final_count;
 
+	final_count = count;
 	init_option(&opts);
 	(*str)++;
 	while (!type_check(**str))
@@ -70,6 +71,11 @@ int		format_analyzer(va_list ap, char **str)
 	}
 	opts_priority(&opts);
 	opts.type = **str;
+	if (opts.type == 'n')
+	{
+		n_return(final_count, ap);
+		return (0);
+	}
 	final_count = format_optimizer(&opts, ap, **str);
 	return (final_count);
 }
@@ -85,7 +91,7 @@ int		format_parser(char *str, va_list ap)
 	{
 		if (*str == '%')
 		{
-			if ((ret = format_analyzer(ap, &str)) == -1)
+			if ((ret = format_analyzer(ap, &str, final_ret)) == -1)
 				return (-1);
 			else
 				final_ret += ret;

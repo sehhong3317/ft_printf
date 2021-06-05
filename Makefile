@@ -6,7 +6,7 @@
 #    By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/02 09:21:25 by sehhong           #+#    #+#              #
-#    Updated: 2021/06/02 12:14:44 by sehhong          ###   ########.fr        #
+#    Updated: 2021/06/05 14:18:48 by sehhong          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ LIBFT_DIR = libft
 LIBFT_LIB = libft.a
 
 SRCS = arg_extracter.c format_checker.c format_maker.c \
-		ft_printf_utils.c ft_printf.c 
+		ft_printf_utils.c ft_printf.c ft_printf_bonus_utils.c
 OBJS = $(SRCS:.c=.o)
 
 CC = gcc

@@ -6,7 +6,7 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 20:40:44 by sehhong           #+#    #+#             */
-/*   Updated: 2021/06/03 13:37:54 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/06/05 16:55:39 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int			type_check(char c)
 {
 	char	*specifier;
 
-	specifier = "cspdiu%xX";
+	specifier = "cspdiu%xXn";
 	while (*specifier)
 	{
 		if (*specifier == c)

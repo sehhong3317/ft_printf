@@ -6,7 +6,7 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 15:44:34 by sehhong           #+#    #+#             */
-/*   Updated: 2021/06/05 11:15:09 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/06/05 16:54:04 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,10 @@ int				arg_extracter_pxx(t_opts *opts, va_list ap, char c);
 
 int				format_optimizer(t_opts *opts, va_list ap, char c);
 void			opts_priority(t_opts *opts);
-int				format_analyzer(va_list ap, char **str);
+int				format_analyzer(va_list ap, char **str, int count);
 int				format_parser(char *str, va_list ap);
 int				ft_printf(const char *format, ...);
+
+void			n_return(int final_ret, va_list ap);
 
 #endif
